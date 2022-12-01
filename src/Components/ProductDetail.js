@@ -1,15 +1,20 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-/*import productList from "./Products";*/
-import Products from "./Products";
-const productList = [];
-export default function ProductDetail() {
+export default function Home ({ title, price, image }){
+
     return (
-        <div>Product Details
-            {productList.map((item)=>{
-                return <Products key={item.id} item={item}/>
-            })}
+        <div>
+            <div className='product'>
+                <div className='title'>Name: {title}</div>
+                <div className='price'>Price: ${price}</div>
+                <img src={image} alt={title} />
+            </div>
+            <Link to="/">
+                <button>Back</button>
+            </Link>
 
         </div>
-    )
+    );
+
 }

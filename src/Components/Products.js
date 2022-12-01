@@ -1,6 +1,8 @@
 /*import React from "react";*/
 
 
+import ProductDetail from "./ProductDetail";
+
 const  productList = [
     {
         id: 1,
@@ -109,4 +111,24 @@ const  productList = [
         },
     },
 ];
-export default productList;
+
+export default function Products (){
+    return (
+        <div>
+            <h1>Products List</h1>
+            <div className='product-list'>
+                {productList.map((item) => {
+                    return (
+
+                        <ProductDetail
+                            title={item.title}
+                            price={item.price}
+                            image={item.image}
+                            key={item.id}
+                        />
+                    );
+                })}
+            </div>
+        </div>
+    )
+}
