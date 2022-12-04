@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import Product from "./Product"
+import Product from "./Product/Product"
 
 const  productList = [
     {
@@ -118,11 +118,11 @@ export default function ProductList (){
             <h1>Products List</h1>
             {productList.map((item) => {
                     return (
-
-                        <Product
+                         <Product
                             item={item}
                             key={item.id}
-                        />
+                            image={item.image}
+                         />
                     );
                 })}
         </div>

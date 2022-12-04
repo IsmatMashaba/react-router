@@ -10,10 +10,11 @@ export default function Home() {
                <Link to="/menu">Go to Menu</Link>
            </div>
             <div>
-                <Link to="/productDetails">Go to Products</Link>
+                <Link to="/products">Go to Products</Link>
             </div>
 
         </div>
 
     )
 }
+
